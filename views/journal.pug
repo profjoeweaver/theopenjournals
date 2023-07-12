@@ -1,0 +1,118 @@
+extends layout
+
+block content
+  div(class="col-sm-12 col-md-12 col-lg-4 col-xl-4")
+    block journalTag
+      h1(class="display-1 text-muted mb-0" style="line-height: .75em;") The #[br] Open #[br] Journal #[br]
+      h4(class="display-4 text-muted mb-3" style="line-height: 1em;") #[em of JournalName] 
+      p #[em The Open Journal of JournalName] invites scholars, reviewers, and readers of science to build a stronger science through open collaboration.
+      p #[em The Open Journal of JournalName] is free to anyone to read but you'll need to join the community to post your work or to review the work of others.
+    div(class="form-signin card mt-4 ml-0")
+      form(class="card-body")
+        h1(class="h4 mb-3 fw-normal") Sign Up to Join
+        div(class="form mb-1")
+          label(for="floatingInput") Email address
+          input(type="email" class="form-control" id="floatingInput")
+        div(class="form")
+          label(for="floatingPassword") Password
+          input(type="password" class="form-control" id="floatingPassword")
+        button(class="w-100 btn btn-lg btn-primary mt-3" type="submit") Sign Up        
+  div(class="col-sm-12 col-md-12 col-lg-6 col-xl-6")
+    ul(clas="list-group card")
+      li(class="list-group-item")
+        h1(class="display-5") Current Collection
+        hr
+        ul(class="list-unstyled")
+            block currentCollection
+                li
+                    a(href="#") Article Title
+                    p Abstract of the article goes here.
+                li
+                    a(href="#") Article Title 2
+                    p Another abstract goes here.
+      li(class="list-group-item")
+        h1(class="display-6") Previous Collections
+        hr
+        div(class="container")
+          div(class="row")
+            block prevCollections
+              div(class="col-sm-12 col-md-6 col-lg-4")
+                ul(class="list-unstyled")
+                    li 
+                    p #[strong 2023]
+                    li 
+                    a(href="#") May
+                    li 
+                    a(href="#") April
+                    li 
+                    a(href="#") March
+                    li 
+                    a(href="#") February
+                    li 
+                    a(href="#") January
+              div(class="col-sm-12 col-md-6 col-lg-4")
+                ul(class="list-unstyled")
+                    li 
+                    p #[strong 2022]
+                    li 
+                    a(href="#") November
+                    li 
+                    a(href="#") October
+                    li 
+                    a(href="#") September
+                    li 
+                    a(href="#") Augutst
+                    li 
+                    a(href="#") July
+                    li 
+                    a(href="#") June
+                    li 
+                    a(href="#") May
+                    li 
+                    a(href="#") April
+                    li 
+                    a(href="#") March
+                    li 
+                    a(href="#") February
+                    li 
+                    a(href="#") January
+                div(class="col-sm-12 col-md-6 col-lg-4")
+                ul(class="list-unstyled")
+                    li 
+                    p #[strong 2021]
+                    li 
+                    a(href="#") November
+                    li 
+                    a(href="#") October
+                    li 
+                    a(href="#") September
+                    li 
+                    a(href="#") Augutst
+                    li 
+                    a(href="#") July
+                    li 
+                    a(href="#") June
+                    li 
+                    a(href="#") May
+                    li 
+                    a(href="#") April
+                    li 
+                    a(href="#") March
+                    li 
+                    a(href="#") February
+                    li 
+                    a(href="#") January
+  div(class="col-sm-12 col-md-12 col-lg-2 col-xl-2")
+    div(class="card bg-light")
+      div(class="card-body")
+        h4(class="card-title") Metrics
+        ul(class="list-unstyled pl-2")
+          block metrics
+            li 
+                p 0 Articles
+            li 
+                p 0 Citations
+            li 
+                p 0 Visits
+            li 
+                p 0 Reviews

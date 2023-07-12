@@ -1,0 +1,26 @@
+extends layout
+
+block title 
+  title TOJ Sign Up
+
+block sectionTitle 
+  span TOJ Platform
+
+block content
+  div(class="col-sm-12 col-md-2 col-lg")
+  div(class="col-sm-12 col-md-8 col-lg")
+    div(class="card")
+      div(class="card-body")
+        form
+          h1(class="display-2" style="line-height: .75em;") The #[br] Open #[br] Journals
+          h6(class="display-6 text-muted mb-3" style="line-height: 1em;") Join the community
+          div(class="form mb-1")
+            label(for="floatingInput") Email address
+            input(type="email" class="form-control" id="floatingInput")
+          div(class="form")
+            label(for="floatingPassword") Password
+            input(type="password" class="form-control" id="floatingPassword")
+            button(class="w-100 btn btn-lg btn-primary mt-3" type="submit") Log In
+    div(class="mt-2")
+      p Already a member of the community? You can log in #[a(href="login") here]
+  div(class="col-sm-12 col-md-2 col-lg")

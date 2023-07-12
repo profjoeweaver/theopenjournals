@@ -1,0 +1,138 @@
+extends userLayout 
+
+block title 
+  title The Open Journals User Dashboard
+
+block sectionTitle 
+  span Dashboard
+
+block content
+  // - Section for User Info
+  div(class="col-sm-12 col-md-3 col-lg-2")
+    div(class="card")
+      img(src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg" class="card-img-top")
+      div(class="card-body")
+        h5(class="card-title text-center") Joe Weaver, Ph.D.
+        p Founder of The Open Journals
+        p Associate Professor of Psychology
+        hr
+        h6 Communities
+        p(class="card-text ms-2") Author, Reviewer, Editor
+        h6 Info
+        div(style="font-size: .75em;")
+          table()
+            tr
+              td
+                i(class="bi bi-geo-alt-fill")
+              td Saginaw, MI
+            tr
+              td
+                i(class="bi bi-buildings-fill")
+              td Saginaw Valley State University
+            tr
+              td
+                i(class="bi bi-link-45deg")
+              td #[a(class="link-dark link-underline link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="http://josephweaver.me/") josephweaver.me]
+            tr
+              td
+                i(class="bi bi-twitter")
+              td #[a(class="link-dark link-underline link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://twitter.com/profjoeweaver") @ProfJoeWeaver]
+            tr
+              td
+                i(class="bi bi-linkedin")
+              td #[a(class="link-dark link-underline link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://www.linkedin.com/in/profjoeweaver/") ProfJoeWeaver]
+            tr
+              td
+                img(src="../images/ORCIDiD_iconbwvector.svg") 
+              td
+                a(class="ms-1" class="link-dark link-underline link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://orcid.org/0000-0002-2718-8379") 0000-0002-2718-8379
+    div(class="card bg-primary-subtle mt-3")
+      div(class="card-body")
+        h4(class="card-title") My Metrics
+        ul(class="list-unstyled ps-2")
+          li 
+              p 0 Median Project Rating
+          li 
+              p 0% Helpful Reviews
+          li 
+              p 0 Reads
+          li 
+              p 0 Citations
+  // - Section for Projects, Reviews, and Reads
+  div(class="col-sm-12 col-md-6 col-lg-8")
+    div(class="row")
+      h2(class="mt-2") My Projects 
+        a(class="toggleSwitch" data-bs-toggle="collapse" href="#collapseProject" role="button" aria-expanded="true" aria-controls="collapseProject")
+          i(class="bi-toggle-on")   
+      div(class="collapse show" id="collapseProject")
+        div(class="row gx-2")
+          div(class="card p-0 me-3 my-2 col-sm-6 col-md-3 position-relative" style="max-height: 25em;")
+            span(class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle")
+              span(class="visually-hidden") New alerts
+            div(class="card-header bg-white border-bottom-0 mt-1 p-2 text-center")
+              h6(style="height:2.5em" class="line-clamp-2") Adipisicing do laboris ut culpa mollit officia magna deserunt veniam deserunt.
+            div(class="card-body px-2 py-0 d-flex flex-column justify-content-between")
+              div(class="ps-2 py-0 my-0")
+                p(class="card-text line-clamp-4") Deserunt eu reprehenderit amet exercitation eiusmod proident sint. Duis consequat anim voluptate ut incididunt sint consectetur.Nisi esse est proident veniam adipisicing voluptate quis officia Lorem Lorem consequat.
+              div(class="text-center my-3")
+                a(class="btn btn-primary btn-sm" href="/../project/") Open
+            div(class="card-footer mt-0 pb-0 border-top-0 bg-primary-subtle")
+              ul(class="list-inline list-unstyled d-flex justify-content-around")
+                li(class="list-inline-item") 32 #[i(class="bi bi-eyeglasses" data-bs-toggle="tooltip" data-bs-title="Views")]
+                li(class="list-inline-item") 75% #[i(class="bi bi-plus-lg" data-bs-toggle="tooltip" data-bs-title="Positive Ratings")]
+                li(class="list-inline-item") 3 #[i(class="bi bi-chat-square-text" data-bs-toggle="tooltip" data-bs-title="Reviews")]
+                li(class="list-inline-item") 10 #[i(class="bi bi-blockquote-left"  data-bs-toggle="tooltip" data-bs-title="Citations")]
+          
+    div(class="row mt-4 w-100")
+      h2 My Reviews 
+        a(class="toggleSwitch" data-bs-toggle="collapse" href="#collapseReview" role="button" aria-expanded="true" aria-controls="collapseReview")
+          i(class="bi-toggle-on")
+      div(class="collapse show table-responsive" id="collapseReview")
+        table(class="table")
+          thead(class="table-light")
+            tr
+              th(scope="col") Project 
+              th(scope="col") Comment
+              th(scope="col") Replies
+              th(scope="col") Date 
+              th(scope="col") Helpfulness 
+          tbody
+            tr 
+              td Officia ut voluptate qui quis tempor cupidatat deserunt do occaecat non. #[br] #[a(class="link-offset-2" href="#") View]
+              td Non aute consectetur eu in sunt consectetur elit excepteur commodo nostrud. Est proident ut ipsum irure veniam nulla dolor laboris do incididunt. Eu duis magna dolore ut voluptate eu ipsum. Mollit eu dolor mollit sunt nulla ut qui mollit.  #[br] #[a(class="link-offset-2" href="#") View]
+              td(class="text-center") #[a(class="link-offset-2" href="#") 3]
+              td(class="text-center") 06/29/2023
+              td(class="text-center") 30%
+    div(class="row mt-4")
+      h2 Reading List 
+        a(class="toggleSwitch" data-bs-toggle="collapse" href="#collapseRead" role="button" aria-expanded="true" aria-controls="collapseRead")
+          i(class="bi-toggle-on")
+      div(class="collapse show" id="collapseRead")
+        div(class="row gx-2")
+          ul(class="list-group")
+            li(class="list-group-item d-flex justify-content-between")
+              a(class="link-offset-2 text-truncate" href="#") Anim dolore proident eiusmod velit aliqua.
+              a(class="link-offset-2 link-secondary" href="#") Joe Weaver
+            li(class="list-group-item d-flex justify-content-between") 
+              a(class="link-offset-2 text-truncate" href="#") Aliquip duis non non laborum laborum culpa sit voluptate occaecat id ullamco labore.
+              a(class="link-offset-2 link-secondary" href="#") Jack Doe
+  div(class="col-sm-12 col-md-3 col-lg-2")
+    div(class="d-flex flex-column")
+      h2(class="text-end border border-0 border-bottom") Activity Feed
+      div(class="card bg-white mb-3 border border-0 rounded-0 border-bottom")
+        div(class="card-header bg-white d-flex justify-content-between p-1 border-bottom-0")
+            h6(class="pt-1 ps-1 m-0") New Review
+            button(class="bg-white border-0 btn_close") #[i(class="bi bi-x")]
+        div(class="card-body pt-0 mt-0")
+          p(class="line-clamp-3 m-0") Aliqua nulla ut aute occaecat irure duis nostrud sunt do exercitation.
+          p(class="text-start my-1") #[a(class="link-offset-2" href="") View]
+          p(class="small muted mb-0 text-end") Today by #[a(class="link-secondary link-offset-2" href="") John Doe]
+                    
+      div(class="card mb-3 bg-white border border-0 rounded-0 border-bottom")
+        div(class="card-header bg-white d-flex justify-content-between p-1 border-bottom-0")
+            h6(class="pt-1 ps-1 m-0") New Reply
+            button(class="bg-white border-0 btn_close") #[i(class="bi bi-x")]
+        div(class="card-body bg-white pt-0 mt-0")
+          p(class="line-clamp-3 m-0") Velit laboris amet enim culpa culpa laborum laboris in Lorem proident nisi non pariatur.
+          p(class="text-start my-1") #[a(class="link-offset-2" href="") View]
+          p(class="small muted mb-0 text-end") Yesterday by #[a(class="link-offset-2 link-secondary" href="") John Doe]

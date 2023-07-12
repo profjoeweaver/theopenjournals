@@ -1,0 +1,26 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    height:100%;
+}
+
+.flex-fill{
+    flex:1;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 2vh auto;
+  }
+
+#NavSearchBox{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius:0 !important;
+}
+
+#NavSearchButton{
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius:0 !important;
+}
