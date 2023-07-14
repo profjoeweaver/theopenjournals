@@ -44,7 +44,7 @@ block content
         p(class="reference") Consectetur incididunt et aliquip dolor excepteur duis nostrud reprehenderit velit adipisicing exercitation esse. Consequat minim aliquip est commodo consectetur.
         p(class="reference") Magna dolore id minim reprehenderit.Laboris anim nulla magna elit veniam in non eiusmod deserunt aute labore.Ut nisi consectetur velit esse qui culpa aliqua commodo excepteur laborum cillum ea sit.
   div(class="col-sm-12 col-md-12 col-lg-3")
-    div(class="card bg-white border-0 pt-0 mt-0")
+    div(class="metricsBox")
       div(class="card-body p-0")
         h4(class="card-title") Metrics
         block metrics
@@ -59,7 +59,7 @@ block content
       h4 Reviews
       div(class="reviewCard")
         //- User and Timestamp
-        div(class="reivewCard__Header")
+        div(class="reviewCard__Header")
           img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
           a(class="link-offset-2 text-dark small" href="/../user/") Joe Weaver
           span(class="small")  @ 6/30/2023 10:48 AM EST
@@ -69,7 +69,7 @@ block content
           //- Review Text
           p(class="truncate-overflow") Nisi ad esse qui culpa nulla nostrud nostrud tempor. Cupidatat est voluptate sunt commodo proident incididunt ex quis magna cupidatat aute. Lorem cillum eu fugiat ex commodo ullamco veniam. Occaecat est quis reprehenderit non. Ullamco sit ex tempor amet commodo deserunt et nostrud id velit ea. Consectetur duis consequat pariatur proident do anim eu irure commodo eu.
           //- Response Box
-          ul(class="p-2 list-inline list-unstyled w-100 d-flex justify-content-around" id="responseBox1")
+          ul(class="responseBox" id="responseBox1")
             li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
             li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
             li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#collapseReply1" data-bs-toggle="collapse" aria-controls="collapseReply1") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
@@ -86,7 +86,7 @@ block content
               button(type="submit" class="btn btn-danger btn-sm") Report
           div(class="d-flex justify-content-around")
             button(class="btn btn-sm btn-light mb-4 border") 1 reply
-      div(class="reviewCard" style="margin-top:-1em;")
+      div(class="reviewCard")
         //- User and Timestamp first reply
         div(class="reviewCard__Header")
           img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
@@ -96,7 +96,7 @@ block content
           //- Reply text
           p(class="truncate-overflow") Velit proident officia eu occaecat consectetur. Irure do officia occaecat id laborum do laborum pariatur tempor elit. Minim velit nisi ea nostrud Lorem dolor irure enim.
           //- Response box
-          ul(class="p-2 list-inline list-unstyled w-100 d-flex justify-content-around" id="responseBox2")
+          ul(class="responseBox" id="responseBox2")
             li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox2") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
             li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#responseBox2") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
             li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#collapseReply2" data-bs-toggle="collapse" aria-controls="collapseReply2") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
@@ -123,18 +123,18 @@ block content
           //- Review Text
           p(class="truncate-overflow") Nisi veniam excepteur esse quis occaecat non est anim cupidatat anim. Adipisicing anim do elit sint cillum reprehenderit quis deserunt qui quis commodo. Veniam dolor sint labore id culpa eiusmod occaecat consequat. Officia occaecat duis enim anim in anim ex commodo irure. Ullamco voluptate eu est ut proident et consequat reprehenderit.
           //- Response Box
-          ul(class="p-2 list-inline list-unstyled w-100 d-flex justify-content-around" id="responseBox1")
-            li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
-            li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
-            li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#collapseReply1" data-bs-toggle="collapse" aria-controls="collapseReply1") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
-            li(class="list-inline-item") #[a(class="shareLink link-secondary" href="#responseBox1") #[i(class="bi bi-share" data-bs-toggle="tooltip" data-bs-title="Share")]]
+          ul(class="responseBox" id="responseBox3")
+            li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox3") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
+            li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#responseBox3") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
+            li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#collapseReply3" data-bs-toggle="collapse" aria-controls="collapseReply3") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
+            li(class="list-inline-item") #[a(class="shareLink link-secondary" href="#responseBox3") #[i(class="bi bi-share" data-bs-toggle="tooltip" data-bs-title="Share")]]
             li(class="list-inline-item") | 
-            li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#collapseReport1" data-bs-toggle="collapse" aria-controls="collapseReport1") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
-          div(class="collapse mb-2 text-end" id="collapseReply1")
+            li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#collapseReport3" data-bs-toggle="collapse" aria-controls="collapseReport3") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
+          div(class="collapse mb-2 text-end" id="collapseReply3")
             form
               textarea(class="w-100" placeholder="Leave your comment here.")
               button(type="submit" class="btn btn-primary") Reply
-          div(class="collapse mb-2 text-end" id="collapseReport1")
+          div(class="collapse mb-2 text-end" id="collapseReport3")
             form
               textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
               button(type="submit" class="btn btn-danger") Report

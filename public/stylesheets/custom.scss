@@ -22,7 +22,8 @@ html {
 
 .reviewCard__Header {
     @extend .card-header;
-    background-color: rgba(1, 1, 1, 0);
+    @extend .rounded;
+    background: linear-gradient(to right, white,$gray-200);
     border: none;
     margin-top: 0;
     padding: 0;
@@ -170,4 +171,21 @@ html {
 .reference {
     text-indent: -3em !important;
     margin-left: 3em;
+}
+
+.metricsBox{
+    @extend .card;
+    background-color:#FFFFFF;
+    border:0;
+    padding-top:0;
+    margin-top:0;
+}
+
+.responseBox{
+    @extend .p-2;
+    @extend .list-inline;
+    @extend .list-unstyled;
+    @extend .w-100;
+    @extend .d-flex;
+    @extend .justify-content-around;
 }
