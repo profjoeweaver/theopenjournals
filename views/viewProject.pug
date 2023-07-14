@@ -57,15 +57,15 @@ block content
           li(class="list-inline-item") 0 Soundness
     div(class="mt-3")
       h4 Reviews
-      div(class="card border-0")
+      div(class="reviewCard")
         //- User and Timestamp
-        div(class="card-header bg-trans border-bottom-0 py-0")
-          img(class="border rounded-circle me-2" style="width:32px; height:32px; object-fit: cover;" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
+        div(class="reivewCard__Header")
+          img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
           a(class="link-offset-2 text-dark small" href="/../user/") Joe Weaver
           span(class="small")  @ 6/30/2023 10:48 AM EST
-        div(class="card-body bg-trans pb-0 my-0 ms-4 border-start" style="margin-top:-2em;")
+        div(class="reviewCard__Body")
           //- Rating
-          p(class="text-center") #[b 8] Clarity | #[b 6] Soundness
+          p #[b 8] Clarity #[br] #[b 6] Soundness
           //- Review Text
           p(class="truncate-overflow") Nisi ad esse qui culpa nulla nostrud nostrud tempor. Cupidatat est voluptate sunt commodo proident incididunt ex quis magna cupidatat aute. Lorem cillum eu fugiat ex commodo ullamco veniam. Occaecat est quis reprehenderit non. Ullamco sit ex tempor amet commodo deserunt et nostrud id velit ea. Consectetur duis consequat pariatur proident do anim eu irure commodo eu.
           //- Response Box
@@ -76,7 +76,7 @@ block content
             li(class="list-inline-item") #[a(class="shareLink link-secondary" href="#responseBox1") #[i(class="bi bi-share" data-bs-toggle="tooltip" data-bs-title="Share")]]
             li(class="list-inline-item") | 
             li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#collapseReport1" data-bs-toggle="collapse" aria-controls="collapseReport1") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
-          div(class="collapse mb-2 text-end" id="collapseReply1")
+          div(class="collapse mb-1 text-end" id="collapseReply1")
             form
               textarea(class="w-100" placeholder="Leave your comment here.")
               button(type="submit" class="btn btn-primary btn-sm") Reply
@@ -85,14 +85,14 @@ block content
               textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
               button(type="submit" class="btn btn-danger btn-sm") Report
           div(class="d-flex justify-content-around")
-            button(class="btn btn-sm btn-light mb-3") 1 reply
-      div(class="card border-0 bg-trans" style="margin-top:-1em;")
+            button(class="btn btn-sm btn-light mb-4 border") 1 reply
+      div(class="reviewCard" style="margin-top:-1em;")
         //- User and Timestamp first reply
-        div(class="card-header bg-trans border-bottom-0")
-          img(class="border rounded-circle me-2" style="width:32px; height:32px; object-fit: cover;" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
+        div(class="reviewCard__Header")
+          img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
           a(class="link-offset-2 text-dark small") John Doe
           span(class="small")  @ 6/30/2023 11:28 AM EST
-        div(class="card-body py-0 my-0 ms-4 border-start border-bottom")
+        div(class="reviewCard__Body border-bottom")
           //- Reply text
           p(class="truncate-overflow") Velit proident officia eu occaecat consectetur. Irure do officia occaecat id laborum do laborum pariatur tempor elit. Minim velit nisi ea nostrud Lorem dolor irure enim.
           //- Response box
@@ -111,17 +111,17 @@ block content
             form
               textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
               button(type="submit" class="btn btn-danger") Report
-      div(class="card border-0")
+      div(class="reviewCard mt-2")
         //- User and Timestamp Separate Review
-        div(class="card-header bg-white border-bottom-0")
-          img(class="border rounded-circle me-2" style="width:32px; height:32px; object-fit: cover;" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
+        div(class="reviewCard__Header")
+          img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
           a(class="link-offset-2 text-dark small" href="/../user/") Joe Weaver
-          span(class="small")  @ 6/30/2023 10:48 AM EST
-        div(class="card-body py-0 my-0 ms-4 border-start border-bottom")
+          span(class="small")  @ 7/4/2023 12:32 PM EST
+        div(class="reviewCard__Body border-bottom")
           //- Rating
-          p(class="text-center") #[b 8] Clarity | #[b 6] Soundness
+          p #[b 7] Clarity #[br] #[b 7] Soundness
           //- Review Text
-          p(class="truncate-overflow") Nisi ad esse qui culpa nulla nostrud nostrud tempor. Cupidatat est voluptate sunt commodo proident incididunt ex quis magna cupidatat aute. Lorem cillum eu fugiat ex commodo ullamco veniam. Occaecat est quis reprehenderit non. Ullamco sit ex tempor amet commodo deserunt et nostrud id velit ea. Consectetur duis consequat pariatur proident do anim eu irure commodo eu.
+          p(class="truncate-overflow") Nisi veniam excepteur esse quis occaecat non est anim cupidatat anim. Adipisicing anim do elit sint cillum reprehenderit quis deserunt qui quis commodo. Veniam dolor sint labore id culpa eiusmod occaecat consequat. Officia occaecat duis enim anim in anim ex commodo irure. Ullamco voluptate eu est ut proident et consequat reprehenderit.
           //- Response Box
           ul(class="p-2 list-inline list-unstyled w-100 d-flex justify-content-around" id="responseBox1")
             li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
