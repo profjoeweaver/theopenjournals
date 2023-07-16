@@ -12215,4 +12215,11 @@ html {
   border: 0;
   padding-top: 0;
   margin-top: 0;
+}
+
+table.userMetricsTable td {
+  vertical-align: top;
+  text-align: left;
+  padding-right: 1em;
+  border-top: 1px dashed #000000;
 }/*# sourceMappingURL=custom.css.map */

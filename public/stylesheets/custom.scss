@@ -189,3 +189,10 @@ html {
     @extend .d-flex;
     @extend .justify-content-around;
 }
+
+table.userMetricsTable td{
+    vertical-align: top;
+    text-align: left;
+    padding-right: 1em;
+    border-top: 1px dashed #000000;
+}
