@@ -7,11 +7,26 @@ block sectionTitle
   span Psychology
 
 block content
+  div(class="row")
+    div(class="col-sm-12 col-md-12 col-lg-9")
+      h2(class="text-capitalize") Qui deserunt mollit et nisi dolore elit dolor id
+      p #[a(class="link-secondary link-offset-2" href="") Joe Weaver]
+      p #[b Keywords:] #[a(class="link-secondary link-offset-2" href="") Irure], #[a(class="link-secondary link-offset-2" href="") Laboris], #[a(class="link-secondary link-offset-2" href="") Reprehenderit]
+    div(class="col-sm-12 col-md-12 col-lg-3 metricsBox")
+      div(class="card-body p-0 mb-3")
+        p(class="card-title") #[b Metrics]
+        block metrics
+        table(class="table") 
+          tr 
+            td 0 Views
+            td 0 Reviews
+            td 0 Citations
+          tr
+            td 0 Clarity
+            td 0 Soundness
   div(class="col-sm-12 col-md-12 col-lg-9")
-    h2(class="text-capitalize") Qui deserunt mollit et nisi dolore elit dolor id
-    p #[a(class="link-secondary link-offset-2" href="") Joe Weaver]
-    p #[b Keywords:] #[a(class="link-secondary link-offset-2" href="") Irure], #[a(class="link-secondary link-offset-2" href="") Laboris], #[a(class="link-secondary link-offset-2" href="") Reprehenderit]
-    div(class="card p-xl-4 p-lg-2 p-md-2 p-sm-1 vh-100 overflow-y-scroll" )
+    a(data-bs-toggle="modal" data-bs-target="#fullScreenText") View full screen
+    div(class="card p-xl-4 p-lg-2 p-md-2 p-sm-1 mb-4 vh-100 overflow-y-scroll" )
       div(class="card-body" id="manuscript")
         h1(class="text-capitalize") Qui deserunt mollit et nisi dolore elit dolor id
         br
@@ -44,18 +59,7 @@ block content
         p(class="reference") Consectetur incididunt et aliquip dolor excepteur duis nostrud reprehenderit velit adipisicing exercitation esse. Consequat minim aliquip est commodo consectetur.
         p(class="reference") Magna dolore id minim reprehenderit.Laboris anim nulla magna elit veniam in non eiusmod deserunt aute labore.Ut nisi consectetur velit esse qui culpa aliqua commodo excepteur laborum cillum ea sit.
   div(class="col-sm-12 col-md-12 col-lg-3")
-    div(class="metricsBox")
-      div(class="card-body p-0")
-        h4(class="card-title") Metrics
-        block metrics
-        ul(class="list-unstyled list-inline pl-2 mb-0")
-          li(class="list-inline-item") 0 Views,
-          li(class="list-inline-item") 0 Reviews,
-          li(class="list-inline-item") 0 Citations,
-        ul(class="list-unstyled list-inline pl-2 mb-0")
-          li(class="list-inline-item") 0 Clarity,
-          li(class="list-inline-item") 0 Soundness
-    div(class="mt-3")
+    div(id="Reviews")
       h4 Reviews
       div(class="reviewCard")
         //- User and Timestamp
@@ -67,7 +71,7 @@ block content
           //- Rating
           p #[b 8] Clarity #[br] #[b 6] Soundness
           //- Review Text
-          p(class="truncate-overflow") Nisi ad esse qui culpa nulla nostrud nostrud tempor. Cupidatat est voluptate sunt commodo proident incididunt ex quis magna cupidatat aute. Lorem cillum eu fugiat ex commodo ullamco veniam. Occaecat est quis reprehenderit non. Ullamco sit ex tempor amet commodo deserunt et nostrud id velit ea. Consectetur duis consequat pariatur proident do anim eu irure commodo eu.
+          p(class="truncate-overflow--offcanvas pointer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight") Nisi ad esse qui culpa nulla nostrud nostrud tempor. Cupidatat est voluptate sunt commodo proident incididunt ex quis magna cupidatat aute. Lorem cillum eu fugiat ex commodo ullamco veniam. Occaecat est quis reprehenderit non. Ullamco sit ex tempor amet commodo deserunt et nostrud id velit ea. Consectetur duis consequat pariatur proident do anim eu irure commodo eu. Dolor eu eiusmod eu tempor deserunt occaecat eu sint nisi excepteur commodo veniam mollit qui. Laborum adipisicing duis ea eu aliqua occaecat fugiat incididunt cillum cupidatat consequat velit aute elit. Magna sint minim pariatur sit do in aute quis qui enim eu ad magna duis. Nulla enim sunt veniam aliqua. Cillum amet aliqua deserunt veniam est aute quis cillum nulla commodo reprehenderit. Duis non irure laborum deserunt sint laborum et. Enim mollit do pariatur aute voluptate tempor esse occaecat aliqua. Nostrud aliquip quis minim esse reprehenderit ullamco culpa ea ad adipisicing consectetur. Amet id cillum mollit dolor et. Id qui magna consectetur veniam. Eu magna et tempor enim nostrud aliquip laboris voluptate deserunt ex magna. Laborum ipsum magna dolor duis labore ipsum elit velit duis aliquip aute. Aute ea duis occaecat occaecat ut ad. Sint sint aliqua officia eiusmod id consectetur fugiat reprehenderit adipisicing. Anim sunt do exercitation officia enim Lorem et laborum sit dolore aute sunt laboris ea.
           //- Response Box
           ul(class="responseBox" id="responseBox1")
             li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]

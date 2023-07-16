@@ -6274,7 +6274,7 @@ textarea.form-control-lg {
 }
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
   --bs-offcanvas-zindex: 1045;
-  --bs-offcanvas-width: 400px;
+  --bs-offcanvas-width: 100vw;
   --bs-offcanvas-height: 30vh;
   --bs-offcanvas-padding-x: 1rem;
   --bs-offcanvas-padding-y: 1rem;
@@ -6283,7 +6283,7 @@ textarea.form-control-lg {
   --bs-offcanvas-border-width: var(--bs-border-width);
   --bs-offcanvas-border-color: var(--bs-border-color-translucent);
   --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  --bs-offcanvas-transition: transform 0.3s ease-in-out;
+  --bs-offcanvas-transition: transform 0s ease-in-out;
   --bs-offcanvas-title-line-height: 1.5;
 }
 
@@ -12156,15 +12156,11 @@ html {
   overflow: hidden;
 }
 
-.truncate-overflow {
+.truncate-overflow, .truncate-overflow--offcanvas {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-.truncate-overflow::after:hover {
-  cursor: pointer;
 }
 
 #manuscript h1, #manuscript .h1 {
@@ -12222,4 +12218,8 @@ table.userMetricsTable td {
   text-align: left;
   padding-right: 1em;
   border-top: 1px dashed #000000;
+}
+
+.pointer {
+  cursor: pointer;
 }/*# sourceMappingURL=custom.css.map */

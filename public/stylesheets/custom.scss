@@ -1,4 +1,6 @@
 //custom.scss
+$offcanvas-horizontal-width: 100vw;
+$offcanvas-transition-duration: 0s;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -119,15 +121,11 @@ html {
     overflow: hidden;
 }
 
-.truncate-overflow {
+.truncate-overflow, .truncate-overflow--offcanvas {
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
-
-.truncate-overflow::after:hover {
-    cursor: pointer;
 }
 
 #manuscript h1 {
@@ -195,4 +193,8 @@ table.userMetricsTable td{
     text-align: left;
     padding-right: 1em;
     border-top: 1px dashed #000000;
+}
+
+.pointer{
+    cursor: pointer;
 }

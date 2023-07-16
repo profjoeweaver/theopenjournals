@@ -17,6 +17,100 @@ html(lang="en")
     link(rel="manifest" href="/site.webmanifest")
 
   body(class="d-flex flex-column h-100")
+    div(class="modal fade" id="fullScreenText" tabindex="-1")
+      div(class="modal-dialog modal-fullscreen")
+        div(class="modal-content")
+          div(class="modal-header")
+            button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+          div(class="modal-body p-5")
+            h1(class="text-capitalize text-center") Qui deserunt mollit et nisi dolore elit dolor id
+            p(class="text-center") Joe Weaver #[br] Saginaw Valley State University
+            br
+            h1 Abstract
+            br
+            p Adipisicing fugiat non cillum Lorem occaecat. In ea commodo laboris nulla id sint. Non voluptate magna non cupidatat. Velit et non in minim eiusmod labore qui aute elit aute sint. Enim sunt pariatur esse fugiat velit veniam ex voluptate velit eiusmod Lorem. Laborum commodo ullamco ipsum culpa pariatur sit et adipisicing irure excepteur proident labore.
+            p #[span(class="fst-italic") Keywords:] Irure, Laboris, Reprehenderit
+            br
+            br
+            br
+            h1(class="text-capitalize") Qui deserunt mollit et nisi dolore elit dolor id
+            br
+            p Voluptate eu nulla ad pariatur quis quis quis. Magna eu commodo enim commodo pariatur tempor ullamco incididunt nisi dolore enim amet. Magna in commodo in commodo ad cillum mollit sit eiusmod culpa sunt dolore sunt in. Eu esse dolore amet ullamco sint non consectetur dolor excepteur. Lorem magna consectetur irure eiusmod nulla. Consectetur labore cupidatat velit fugiat qui laborum esse est irure voluptate aliquip pariatur. Amet fugiat est consequat magna Lorem sit aliquip id dolore tempor excepteur esse officia aliqua. Exercitation sint ullamco mollit velit enim eu deserunt incididunt adipisicing do officia anim nulla eiusmod. Ullamco laborum id ut consectetur ex. Ullamco deserunt culpa velit proident aute eu do irure ut aliquip ea voluptate occaecat. Magna sunt ea esse magna cillum enim commodo velit duis velit.
+            p Ex quis veniam ullamco non enim dolor non eu. Lorem tempor minim culpa irure minim pariatur quis do exercitation. Consequat ullamco adipisicing id adipisicing ut laborum in id nostrud mollit id.
+            h2 Irure duis irure enim reprehenderit eiusmod eiusmod irure ut excepteur et enim.
+            p Consectetur cillum aliquip nostrud velit in. Nulla aliquip et nulla anim laboris sint sunt. Pariatur anim velit deserunt aute culpa deserunt nisi ullamco culpa.
+            p Do in fugiat veniam laborum veniam nisi fugiat quis sint reprehenderit aliquip ad. Ex eu non ad ea exercitation. Velit eu in nostrud ullamco qui ea nostrud elit aliquip laboris sit excepteur cillum veniam. Sint pariatur anim esse ut est ex ullamco excepteur. Veniam laboris eiusmod aute adipisicing duis ad. Commodo non est adipisicing aute. Reprehenderit fugiat laborum ea magna officia qui esse ad aliqua consectetur dolor sunt esse consequat.
+            p Non eiusmod anim amet cupidatat mollit nostrud duis amet Lorem deserunt. Ipsum quis enim ad irure et adipisicing aliqua do duis sint. Aliqua ipsum nostrud sit ex. Elit non dolore dolore voluptate id. Deserunt nisi mollit reprehenderit magna adipisicing nulla exercitation do elit eiusmod dolor veniam exercitation.
+            p Tempor veniam aute ex deserunt. Deserunt proident eiusmod laborum commodo nostrud dolore officia veniam. Consequat velit exercitation elit tempor id et veniam. Eiusmod eu id eu do ullamco officia ea anim.
+            h3 Consequat nisi fugiat excepteur aliqua enim nostrud nulla cillum proident incididunt esse commodo.
+            p Magna aliqua ad eu labore elit nulla exercitation sunt ut aliqua enim. Est tempor sit minim excepteur in dolor. Sit nulla ea non qui voluptate laborum cillum esse elit ex cillum. Sint cupidatat in ex commodo cillum ex incididunt.
+            p Officia commodo excepteur ullamco commodo sint tempor nulla velit reprehenderit sunt ullamco quis aute. Et ex aute id et do est velit cillum consectetur non Lorem. Est dolore non dolor dolor id nulla tempor et non dolor mollit consequat. Non fugiat id do minim duis ipsum dolore sint tempor. Sint enim laboris do sint esse culpa consequat.
+            p #[span(class="h4") Fugiat dolore est irure esse qui eu id ad velit fugiat] Duis occaecat officia ut proident aliquip ipsum eiusmod labore culpa minim dolore nisi. Et elit veniam incididunt ipsum fugiat anim incididunt qui labore fugiat laborum tempor id enim. Duis ut aute sint veniam reprehenderit ipsum anim aliqua. Pariatur nulla velit eu ad est labore mollit aute ad quis dolore magna.
+            p #[span(class="h5") Cillum irure aliqua eiusmod pariatur velit proident deserunt elit nisi.] Dolore excepteur ex exercitation tempor fugiat aliquip pariatur proident mollit fugiat labore cillum est velit. Cupidatat sunt quis est enim minim cillum tempor aliqua aliqua labore sunt tempor aliqua anim. Laborum dolor excepteur pariatur nisi.
+            p Ullamco adipisicing culpa occaecat nostrud reprehenderit excepteur minim. Ex incididunt dolor ad veniam ullamco adipisicing anim. Nulla duis qui voluptate labore. Commodo esse nisi occaecat consequat laboris veniam elit mollit aute id. In occaecat eiusmod esse ut culpa est aliquip ad sit magna adipisicing do nulla. Aute dolor velit id culpa fugiat.
+            br
+            h1 References 
+            p(class="reference") Consectetur incididunt et aliquip dolor excepteur duis nostrud reprehenderit velit adipisicing exercitation esse. Consequat minim aliquip est commodo consectetur.
+            p(class="reference") Magna dolore id minim reprehenderit.Laboris anim nulla magna elit veniam in non eiusmod deserunt aute labore.Ut nisi consectetur velit esse qui culpa aliqua commodo excepteur laborum cillum ea sit.
+    
+    //- Offscreen for detailed review view
+    div(class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel")
+      div(class="offcanvas-header justify-content-end")
+        button(type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close")
+      div(class="offcanvas-body p-5")
+        div
+          img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
+          a(class="link-offset-2 text-dark small" href="/../user/") Joe Weaver
+          span(class="small")  @ 6/30/2023 10:48 AM EST
+        div
+          //- Rating
+          p #[b 8] Clarity #[br] #[b 6] Soundness
+          //- Review Text
+          p Nisi ad esse qui culpa nulla nostrud nostrud tempor. Cupidatat est voluptate sunt commodo proident incididunt ex quis magna cupidatat aute. Lorem cillum eu fugiat ex commodo ullamco veniam. Occaecat est quis reprehenderit non. Ullamco sit ex tempor amet commodo deserunt et nostrud id velit ea. Consectetur duis consequat pariatur proident do anim eu irure commodo eu. Dolor eu eiusmod eu tempor deserunt occaecat eu sint nisi excepteur commodo veniam mollit qui. Laborum adipisicing duis ea eu aliqua occaecat fugiat incididunt cillum cupidatat consequat velit aute elit. Magna sint minim pariatur sit do in aute quis qui enim eu ad magna duis. Nulla enim sunt veniam aliqua. Cillum amet aliqua deserunt veniam est aute quis cillum nulla commodo reprehenderit. Duis non irure laborum deserunt sint laborum et. Enim mollit do pariatur aute voluptate tempor esse occaecat aliqua. Nostrud aliquip quis minim esse reprehenderit ullamco culpa ea ad adipisicing consectetur. Amet id cillum mollit dolor et. Id qui magna consectetur veniam. Eu magna et tempor enim nostrud aliquip laboris voluptate deserunt ex magna. Laborum ipsum magna dolor duis labore ipsum elit velit duis aliquip aute. Aute ea duis occaecat occaecat ut ad. Sint sint aliqua officia eiusmod id consectetur fugiat reprehenderit adipisicing. Anim sunt do exercitation officia enim Lorem et laborum sit dolore aute sunt laboris ea.
+          //- Response Box
+          ul(class="responseBox" id="responseBox1")
+            li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
+            li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
+            li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#collapseReply1" data-bs-toggle="collapse" aria-controls="collapseReply1") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
+            li(class="list-inline-item") #[a(class="shareLink link-secondary" href="#responseBox1") #[i(class="bi bi-share" data-bs-toggle="tooltip" data-bs-title="Share")]]
+            li(class="list-inline-item") | 
+            li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#collapseReport1" data-bs-toggle="collapse" aria-controls="collapseReport1") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
+          div(class="collapse mb-1 text-end" id="collapseReply1")
+            form
+              textarea(class="w-100" placeholder="Leave your comment here.")
+              button(type="submit" class="btn btn-primary btn-sm") Reply
+          div(class="collapse mb-2 text-end" id="collapseReport1")
+            form
+              textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
+              button(type="submit" class="btn btn-danger btn-sm") Report
+          div(class="d-flex justify-content-around")
+            button(class="btn btn-sm btn-light mb-4 border") 1 reply
+        div
+          //- User and Timestamp first reply
+          div
+            img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
+            a(class="link-offset-2 text-dark small") John Doe
+            span(class="small")  @ 6/30/2023 11:28 AM EST
+          div
+            //- Reply text
+            p(class="truncate-overflow") Velit proident officia eu occaecat consectetur. Irure do officia occaecat id laborum do laborum pariatur tempor elit. Minim velit nisi ea nostrud Lorem dolor irure enim.
+            //- Response box
+            ul(class="responseBox" id="responseBox2")
+              li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox2") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
+              li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#responseBox2") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
+              li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#collapseReply2" data-bs-toggle="collapse" aria-controls="collapseReply2") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
+              li(class="list-inline-item") #[a(class="shareLink link-secondary" href="#responseBox2") #[i(class="bi bi-share" data-bs-toggle="tooltip" data-bs-title="Share")]]
+              li(class="list-inline-item") | 
+              li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#collapseReport2" data-bs-toggle="collapse" aria-controls="collapseReport2") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
+            div(class="collapse mb-2 text-end" id="collapseReply2")
+              form
+                textarea(class="w-100" placeholder="Leave your comment here.")
+                button(type="submit" class="btn btn-primary") Reply
+            div(class="collapse mb-2 text-end" id="collapseReport2")
+              form
+                textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
+                button(type="submit" class="btn btn-danger") Report
+
     header
       nav(class="navbar navbar-expand-lg navbar-dark bg-black px-1")
         button(class="navbar-toggler",type="button",data-bs-toggle="collapse",data-bs-target="#navbarSupportedContent",aria-controls="navbarSupportedContent",aria-expanded="false",aria-label="Toggle navigation")
