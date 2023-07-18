@@ -12,9 +12,36 @@ html {
     background-color: white;
 }
 
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $secondary $light;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: $light;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $secondary;
+    border-radius: 20px;
+    border: 3px solid $light;
+  }
+
 html {
     --lh: 1.5rem;
     line-height: var(--lh);
+}
+
+.reviewGroup {
+    @extend .card;
+    padding:1em;
+    margin-bottom:1em;
 }
 
 .reviewCard {
@@ -24,10 +51,10 @@ html {
 
 .reviewCard__Header {
     @extend .card-header;
-    @extend .rounded;
-    background: linear-gradient(to right, white,$gray-200);
+    background-color:white;
     border: none;
     margin-top: 0;
+    margin-bottom: .5em;
     padding: 0;
 }
 
@@ -42,10 +69,8 @@ html {
 
 .reviewCard__Body {
     @extend .card-body;
-    @extend .ms-3;
-    @extend .border-start;
     background-color: rgba(1, 1, 1, 0);
-    padding-bottom: 0;
+    padding:0;
     margin-top: 0;
     margin-bottom: 0;
 
@@ -173,10 +198,10 @@ html {
 
 .metricsBox{
     @extend .card;
-    background-color:#FFFFFF;
     border:0;
     padding-top:0;
     margin-top:0;
+    background-color: $light
 }
 
 .responseBox{

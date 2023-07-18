@@ -4336,7 +4336,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.card, .metricsBox, .reviewCard {
+.card, .metricsBox, .reviewCard, .reviewGroup {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
@@ -4368,28 +4368,29 @@ textarea.form-control-lg {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
-.card > hr, .metricsBox > hr, .reviewCard > hr {
+.card > hr, .metricsBox > hr, .reviewCard > hr, .reviewGroup > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group, .metricsBox > .list-group, .reviewCard > .list-group {
+.card > .list-group, .metricsBox > .list-group, .reviewCard > .list-group, .reviewGroup > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child, .metricsBox > .list-group:first-child, .reviewCard > .list-group:first-child {
+.card > .list-group:first-child, .metricsBox > .list-group:first-child, .reviewCard > .list-group:first-child, .reviewGroup > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
-.card > .list-group:last-child, .metricsBox > .list-group:last-child, .reviewCard > .list-group:last-child {
+.card > .list-group:last-child, .metricsBox > .list-group:last-child, .reviewCard > .list-group:last-child, .reviewGroup > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
-.card > .card-header + .list-group, .metricsBox > .card-header + .list-group, .card > .reviewCard__Header + .list-group, .metricsBox > .reviewCard__Header + .list-group, .reviewCard > .card-header + .list-group, .reviewCard > .reviewCard__Header + .list-group,
+.card > .card-header + .list-group, .metricsBox > .card-header + .list-group, .card > .reviewCard__Header + .list-group, .metricsBox > .reviewCard__Header + .list-group, .reviewCard > .card-header + .list-group, .reviewCard > .reviewCard__Header + .list-group, .reviewGroup > .card-header + .list-group, .reviewGroup > .reviewCard__Header + .list-group,
 .card > .list-group + .card-footer,
 .metricsBox > .list-group + .card-footer,
-.reviewCard > .list-group + .card-footer {
+.reviewCard > .list-group + .card-footer,
+.reviewGroup > .list-group + .card-footer {
   border-top: 0;
 }
 
@@ -4483,7 +4484,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
 
-.card-group > .card, .card-group > .metricsBox, .card-group > .reviewCard {
+.card-group > .card, .card-group > .metricsBox, .card-group > .reviewCard, .card-group > .reviewGroup {
   margin-bottom: var(--bs-card-group-margin);
 }
 @media (min-width: 576px) {
@@ -4491,50 +4492,56 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card, .card-group > .metricsBox, .card-group > .reviewCard {
+  .card-group > .card, .card-group > .metricsBox, .card-group > .reviewCard, .card-group > .reviewGroup {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card, .card-group > .metricsBox + .card, .card-group > .card + .metricsBox, .card-group > .metricsBox + .metricsBox, .card-group > .reviewCard + .card, .card-group > .reviewCard + .metricsBox, .card-group > .card + .reviewCard, .card-group > .metricsBox + .reviewCard, .card-group > .reviewCard + .reviewCard {
+  .card-group > .card + .card, .card-group > .metricsBox + .card, .card-group > .card + .metricsBox, .card-group > .metricsBox + .metricsBox, .card-group > .reviewCard + .card, .card-group > .reviewCard + .metricsBox, .card-group > .card + .reviewCard, .card-group > .metricsBox + .reviewCard, .card-group > .reviewCard + .reviewCard, .card-group > .reviewGroup + .card, .card-group > .reviewGroup + .metricsBox, .card-group > .reviewGroup + .reviewCard, .card-group > .card + .reviewGroup, .card-group > .metricsBox + .reviewGroup, .card-group > .reviewCard + .reviewGroup, .card-group > .reviewGroup + .reviewGroup {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child), .card-group > .metricsBox:not(:last-child), .card-group > .reviewCard:not(:last-child) {
+  .card-group > .card:not(:last-child), .card-group > .metricsBox:not(:last-child), .card-group > .reviewCard:not(:last-child), .card-group > .reviewGroup:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top, .card-group > .metricsBox:not(:last-child) .card-img-top, .card-group > .reviewCard:not(:last-child) .card-img-top,
+  .card-group > .card:not(:last-child) .card-img-top, .card-group > .metricsBox:not(:last-child) .card-img-top, .card-group > .reviewCard:not(:last-child) .card-img-top, .card-group > .reviewGroup:not(:last-child) .card-img-top,
   .card-group > .card:not(:last-child) .card-header,
   .card-group > .metricsBox:not(:last-child) .card-header,
   .card-group > .card:not(:last-child) .reviewCard__Header,
   .card-group > .metricsBox:not(:last-child) .reviewCard__Header,
   .card-group > .reviewCard:not(:last-child) .card-header,
-  .card-group > .reviewCard:not(:last-child) .reviewCard__Header {
+  .card-group > .reviewCard:not(:last-child) .reviewCard__Header,
+  .card-group > .reviewGroup:not(:last-child) .card-header,
+  .card-group > .reviewGroup:not(:last-child) .reviewCard__Header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .metricsBox:not(:last-child) .card-img-bottom, .card-group > .reviewCard:not(:last-child) .card-img-bottom,
+  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .metricsBox:not(:last-child) .card-img-bottom, .card-group > .reviewCard:not(:last-child) .card-img-bottom, .card-group > .reviewGroup:not(:last-child) .card-img-bottom,
   .card-group > .card:not(:last-child) .card-footer,
   .card-group > .metricsBox:not(:last-child) .card-footer,
-  .card-group > .reviewCard:not(:last-child) .card-footer {
+  .card-group > .reviewCard:not(:last-child) .card-footer,
+  .card-group > .reviewGroup:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child), .card-group > .metricsBox:not(:first-child), .card-group > .reviewCard:not(:first-child) {
+  .card-group > .card:not(:first-child), .card-group > .metricsBox:not(:first-child), .card-group > .reviewCard:not(:first-child), .card-group > .reviewGroup:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top, .card-group > .metricsBox:not(:first-child) .card-img-top, .card-group > .reviewCard:not(:first-child) .card-img-top,
+  .card-group > .card:not(:first-child) .card-img-top, .card-group > .metricsBox:not(:first-child) .card-img-top, .card-group > .reviewCard:not(:first-child) .card-img-top, .card-group > .reviewGroup:not(:first-child) .card-img-top,
   .card-group > .card:not(:first-child) .card-header,
   .card-group > .metricsBox:not(:first-child) .card-header,
   .card-group > .card:not(:first-child) .reviewCard__Header,
   .card-group > .metricsBox:not(:first-child) .reviewCard__Header,
   .card-group > .reviewCard:not(:first-child) .card-header,
-  .card-group > .reviewCard:not(:first-child) .reviewCard__Header {
+  .card-group > .reviewCard:not(:first-child) .reviewCard__Header,
+  .card-group > .reviewGroup:not(:first-child) .card-header,
+  .card-group > .reviewGroup:not(:first-child) .reviewCard__Header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .metricsBox:not(:first-child) .card-img-bottom, .card-group > .reviewCard:not(:first-child) .card-img-bottom,
+  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .metricsBox:not(:first-child) .card-img-bottom, .card-group > .reviewCard:not(:first-child) .card-img-bottom, .card-group > .reviewGroup:not(:first-child) .card-img-bottom,
   .card-group > .card:not(:first-child) .card-footer,
   .card-group > .metricsBox:not(:first-child) .card-footer,
-  .card-group > .reviewCard:not(:first-child) .card-footer {
+  .card-group > .reviewCard:not(:first-child) .card-footer,
+  .card-group > .reviewGroup:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -7538,7 +7545,7 @@ textarea.form-control-lg {
   border-bottom: 0 !important;
 }
 
-.border-start, .reviewCard__Body {
+.border-start {
   border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
@@ -8098,7 +8105,7 @@ textarea.form-control-lg {
   margin-left: 0.5rem !important;
 }
 
-.ms-3, .reviewCard__Body {
+.ms-3 {
   margin-left: 1rem !important;
 }
 
@@ -8950,7 +8957,7 @@ textarea.form-control-lg {
   pointer-events: auto !important;
 }
 
-.rounded, .reviewCard__Header {
+.rounded {
   border-radius: var(--bs-border-radius) !important;
 }
 
@@ -12056,9 +12063,35 @@ html {
   background-color: white;
 }
 
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6c757d #f8f9fa;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #6c757d;
+  border-radius: 20px;
+  border: 3px solid #f8f9fa;
+}
+
 html {
   --lh: 1.5rem;
   line-height: var(--lh);
+}
+
+.reviewGroup {
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
 .reviewCard {
@@ -12066,9 +12099,10 @@ html {
 }
 
 .reviewCard__Header {
-  background: linear-gradient(to right, white, #e9ecef);
+  background-color: white;
   border: none;
   margin-top: 0;
+  margin-bottom: 0.5em;
   padding: 0;
 }
 
@@ -12081,7 +12115,7 @@ html {
 
 .reviewCard__Body {
   background-color: rgba(1, 1, 1, 0);
-  padding-bottom: 0;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -12207,10 +12241,10 @@ html {
 }
 
 .metricsBox {
-  background-color: #FFFFFF;
   border: 0;
   padding-top: 0;
   margin-top: 0;
+  background-color: #f8f9fa;
 }
 
 table.userMetricsTable td {
