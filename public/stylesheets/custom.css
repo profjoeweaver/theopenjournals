@@ -12089,6 +12089,11 @@ html {
   line-height: var(--lh);
 }
 
+#Reviews {
+  max-height: 95vh;
+  overflow-y: scroll;
+}
+
 .reviewGroup {
   padding: 1em;
   margin-bottom: 1em;

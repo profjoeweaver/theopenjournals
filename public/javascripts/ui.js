@@ -45,5 +45,16 @@ $(document).ready(function () {
         $(this).toggleClass('truncate-overflow')
     })
 
+    $("#clarityValue").text($('#clarity').val());
+
+    $('#clarity').on( "change", function(){
+        $('#clarityValue').text($('#clarity').val());
+    })
+
+    $("#soundnessValue").text($('#soundness').val());
+    $('#soundness').on( "change", function(){
+        $('#soundnessValue').text($('#soundness').val());
+    })
+
 });
 

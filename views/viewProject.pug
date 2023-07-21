@@ -18,13 +18,13 @@ block content
       div(class="card-body p-0")
         block metrics
           table(class="table table-light") 
+            tr
+              td #[b 7.5] Clarity
+              td #[b 6.5] Soundness
             tr 
               td #[b 58] Views
               td #[b 3] Reviews
               td #[b 1] Citations
-            tr
-              td #[b 7.5] Clarity
-              td #[b 6.5] Soundness
   div(class="row pt-2")
     div(class="col-sm-12 col-md-12 col-lg-9")
       div(class="card rounded-0 p-xl-4 p-lg-2 p-md-2 p-sm-1 mb-4 vh-100 overflow-y-scroll" )
@@ -62,8 +62,18 @@ block content
           p(class="reference") Consectetur incididunt et aliquip dolor excepteur duis nostrud reprehenderit velit adipisicing exercitation esse. Consequat minim aliquip est commodo consectetur.
           p(class="reference") Magna dolore id minim reprehenderit.Laboris anim nulla magna elit veniam in non eiusmod deserunt aute labore.Ut nisi consectetur velit esse qui culpa aliqua commodo excepteur laborum cillum ea sit.
     div(class="col-sm-12 col-md-12 col-lg-3")
-      button(type="button" class="btn btn-primary mb-1") New Review
-      div(id="Reviews" class="vh-100 overflow-y-scroll")
+      div(class="d-grid")
+        button(type="button" class="btn btn-primary mb-1" data-bs-toggle="collapse" data-bs-target="#newReview" aria-controls="newReview") New Review
+        div(class="collapse card mb-2" id="newReview")
+          form(class="card-body d-flex flex-column ")
+            label(for="clarity") Clarity: #[span(id="clarityValue")]
+            input(class="my-2" type="range" id="clarity" name="clarity" min="0" max="10")
+            label(for="soundness") Soundness: #[span(id="soundnessValue")]
+            input(class="my-2" type="range" id="soundness" name="soundness" min="0" max="10")
+            label(for="reviewComments") Comments:
+            textarea(class="w-100 my-2" id="reviewComments" name="reviewComments" placeholder="Please share your comments.")
+            button(type="submit" class="btn btn-primary btn-sm") Post
+      div(id="Reviews")
         div(class="reviewGroup")
           div(class="reviewCard")
             //- User and Timestamp

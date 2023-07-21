@@ -39,6 +39,11 @@ html {
     line-height: var(--lh);
 }
 
+#Reviews{
+    max-height:95vh;
+    overflow-y: scroll;
+}
+
 .reviewGroup {
     @extend .card;
     padding:1em;
