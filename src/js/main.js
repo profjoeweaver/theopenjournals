@@ -4,6 +4,10 @@ import '../scss/styles.scss'
 //Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
+//Import jQuery
+var $ = require('jquery')
+var jQuery = require('jquery')
+
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
@@ -58,6 +62,7 @@ $(document).ready(function () {
     })
 
     $("#soundnessValue").text($('#soundness').val());
+
     $('#soundness').on( "change", function(){
         $('#soundnessValue').text($('#soundness').val());
     })
