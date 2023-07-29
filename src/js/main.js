@@ -8,10 +8,10 @@ import * as bootstrap from 'bootstrap'
 var $ = require('jquery')
 var jQuery = require('jquery')
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
-$(document).ready(function () {
+(function () {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    
     $('.toggleSwitch').on("click", function () {
         $(this).find("i").toggleClass("bi-toggle-on bi bi-toggle-off");
     });
