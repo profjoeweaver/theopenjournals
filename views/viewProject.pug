@@ -62,6 +62,7 @@ block content
           p(class="reference") Consectetur incididunt et aliquip dolor excepteur duis nostrud reprehenderit velit adipisicing exercitation esse. Consequat minim aliquip est commodo consectetur.
           p(class="reference") Magna dolore id minim reprehenderit.Laboris anim nulla magna elit veniam in non eiusmod deserunt aute labore.Ut nisi consectetur velit esse qui culpa aliqua commodo excepteur laborum cillum ea sit.
     div(class="col-sm-12 col-md-12 col-lg-3")
+      //- New Review
       div(class="d-grid")
         button(type="button" class="btn btn-primary mb-1 " data-bs-toggle="collapse" data-bs-target="#newReview" aria-controls="newReview") #[i(class="bi bi-plus-circle")] Add a Review
         div(class="collapse card mb-2" id="newReview")
@@ -80,8 +81,7 @@ block content
             div(class="reviewCard__Header")
               img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
               a(class="link-offset-2 text-dark small" href="/../user/") Joe Weaver
-              br
-              span(class="small")  @ 6/30/2023 10:48 AM EST
+              span(class="small muted")  6/30/2023
             div(class="reviewCard__Body")
               //- Rating
               p #[b 8] Clarity #[br] #[b 6] Soundness
@@ -103,14 +103,13 @@ block content
                 form
                   textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
                   button(type="submit" class="btn btn-danger btn-sm") Report
-              div(class="d-flex justify-content-around")
-                button(class="btn btn-sm btn-light mb-4 border") 1 reply
+              
           div(class="reviewCard")
             //- User and Timestamp first reply
             div(class="reviewCard__Header")
               img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
               a(class="link-offset-2 text-dark small") John Doe
-              span(class="small")  @ 6/30/2023 11:28 AM EST
+              span(class="small muted")  6/30/2023
             div(class="reviewCard__Body mb-2")
               //- Reply text
               p(class="truncate-overflow") Velit proident officia eu occaecat consectetur. Irure do officia occaecat id laborum do laborum pariatur tempor elit. Minim velit nisi ea nostrud Lorem dolor irure enim.
@@ -118,25 +117,21 @@ block content
               ul(class="responseBox" id="responseBox2")
                 li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox2") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
                 li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#responseBox2") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
-                li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#collapseReply2" data-bs-toggle="collapse" aria-controls="collapseReply2") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
-                li(class="list-inline-item") #[a(class="shareLink link-secondary" href="#responseBox2") #[i(class="bi bi-share" data-bs-toggle="tooltip" data-bs-title="Share")]]
                 li(class="list-inline-item") | 
                 li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#collapseReport2" data-bs-toggle="collapse" aria-controls="collapseReport2") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
-              div(class="collapse mb-2 text-end" id="collapseReply2")
-                form
-                  textarea(class="w-100" placeholder="Leave your comment here.")
-                  button(type="submit" class="btn btn-primary") Reply
               div(class="collapse mb-2 text-end" id="collapseReport2")
                 form
                   textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
                   button(type="submit" class="btn btn-danger") Report
+              div(class="d-flex justify-content-around")
+                button(class="btn btn-sm btn-light border" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight") 1 more reply
         div(class="reviewGroup")
           div(class="reviewCard mt-2")
             //- User and Timestamp Separate Review
             div(class="reviewCard__Header")
               img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
               a(class="link-offset-2 text-dark small" href="/../user/") Joe Weaver
-              span(class="small")  @ 7/4/2023 12:32 PM EST
+              span(class="small muted")  7/4/2023
             div(class="reviewCard__Body")
               //- Rating
               p #[b 7] Clarity #[br] #[b 7] Soundness

@@ -55,58 +55,71 @@ html(lang="en")
     
     //- Offscreen for detailed review view
     div(class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel")
-      div(class="offcanvas-header justify-content-end")
+      div(class="offcanvas-header border-bottom justify-content-between")
+        h1(class="display-6 text-capitalize") Review Thread
         button(type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close")
       div(class="offcanvas-body p-5")
-        div
-          img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
-          a(class="link-offset-2 text-dark small" href="/../user/") Joe Weaver
-          span(class="small")  @ 6/30/2023 10:48 AM EST
-        div
-          //- Rating
-          p #[b 8] Clarity #[br] #[b 6] Soundness
-          //- Review Text
-          p Nisi ad esse qui culpa nulla nostrud nostrud tempor. Cupidatat est voluptate sunt commodo proident incididunt ex quis magna cupidatat aute. Lorem cillum eu fugiat ex commodo ullamco veniam. Occaecat est quis reprehenderit non. Ullamco sit ex tempor amet commodo deserunt et nostrud id velit ea. Consectetur duis consequat pariatur proident do anim eu irure commodo eu. Dolor eu eiusmod eu tempor deserunt occaecat eu sint nisi excepteur commodo veniam mollit qui. Laborum adipisicing duis ea eu aliqua occaecat fugiat incididunt cillum cupidatat consequat velit aute elit. Magna sint minim pariatur sit do in aute quis qui enim eu ad magna duis. Nulla enim sunt veniam aliqua. Cillum amet aliqua deserunt veniam est aute quis cillum nulla commodo reprehenderit. Duis non irure laborum deserunt sint laborum et. Enim mollit do pariatur aute voluptate tempor esse occaecat aliqua. Nostrud aliquip quis minim esse reprehenderit ullamco culpa ea ad adipisicing consectetur. Amet id cillum mollit dolor et. Id qui magna consectetur veniam. Eu magna et tempor enim nostrud aliquip laboris voluptate deserunt ex magna. Laborum ipsum magna dolor duis labore ipsum elit velit duis aliquip aute. Aute ea duis occaecat occaecat ut ad. Sint sint aliqua officia eiusmod id consectetur fugiat reprehenderit adipisicing. Anim sunt do exercitation officia enim Lorem et laborum sit dolore aute sunt laboris ea.
-          //- Response Box
-          ul(class="responseBox" id="responseBox1")
-            li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
-            li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#responseBox1") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
-            li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#collapseReply1" data-bs-toggle="collapse" aria-controls="collapseReply1") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
-            li(class="list-inline-item") #[a(class="shareLink link-secondary" href="#responseBox1") #[i(class="bi bi-share" data-bs-toggle="tooltip" data-bs-title="Share")]]
-            li(class="list-inline-item") | 
-            li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#collapseReport1" data-bs-toggle="collapse" aria-controls="collapseReport1") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
-          div(class="collapse mb-1 text-end" id="collapseReply1")
-            form
-              textarea(class="w-100" placeholder="Leave your comment here.")
-              button(type="submit" class="btn btn-primary btn-sm") Reply
-          div(class="collapse mb-2 text-end" id="collapseReport1")
-            form
-              textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
-              button(type="submit" class="btn btn-danger btn-sm") Report
-          div(class="d-flex justify-content-around")
-            button(class="btn btn-sm btn-light mb-4 border") 1 reply
-        div
+        div(class="OffCanvas__Review" id="OffCanvas_Review1")
+          div(class="OffCanvas__ReviewByline")
+            img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
+            a(class="link-offset-2 text-dark small" href="/../user/") Joe Weaver
+            span(class="small muted")  6/30/2023
+          div(class="OffCanvas__ReviewBody")
+            //- Rating
+            p #[b 8] Clarity | #[b 6] Soundness
+            //- Review Text
+            p Nisi ad esse qui culpa nulla nostrud nostrud tempor. Cupidatat est voluptate sunt commodo proident incididunt ex quis magna cupidatat aute. Lorem cillum eu fugiat ex commodo ullamco veniam. Occaecat est quis reprehenderit non. Ullamco sit ex tempor amet commodo deserunt et nostrud id velit ea. Consectetur duis consequat pariatur proident do anim eu irure commodo eu. Dolor eu eiusmod eu tempor deserunt occaecat eu sint nisi excepteur commodo veniam mollit qui. Laborum adipisicing duis ea eu aliqua occaecat fugiat incididunt cillum cupidatat consequat velit aute elit. Magna sint minim pariatur sit do in aute quis qui enim eu ad magna duis. Nulla enim sunt veniam aliqua. Cillum amet aliqua deserunt veniam est aute quis cillum nulla commodo reprehenderit. Duis non irure laborum deserunt sint laborum et. Enim mollit do pariatur aute voluptate tempor esse occaecat aliqua. Nostrud aliquip quis minim esse reprehenderit ullamco culpa ea ad adipisicing consectetur. Amet id cillum mollit dolor et. Id qui magna consectetur veniam. Eu magna et tempor enim nostrud aliquip laboris voluptate deserunt ex magna. Laborum ipsum magna dolor duis labore ipsum elit velit duis aliquip aute. Aute ea duis occaecat occaecat ut ad. Sint sint aliqua officia eiusmod id consectetur fugiat reprehenderit adipisicing. Anim sunt do exercitation officia enim Lorem et laborum sit dolore aute sunt laboris ea.
+            //- Response Box
+            ul(class="OffCanvas__ResponseBox" id="OffCanvas__responseBox1")
+              li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#OffCanvas__responseBox1") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
+              li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#OffCanvas__responseBox1") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
+              li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#OffCanvas__collapseReply1" data-bs-toggle="collapse" aria-controls="OffCanvas__collapseReply1") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
+              li(class="list-inline-item") #[a(class="shareLink link-secondary" href="#OffCanvas__responseBox1") #[i(class="bi bi-share" data-bs-toggle="tooltip" data-bs-title="Share")]]
+              li(class="list-inline-item") | 
+              li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#OffCanvas__collapseReport1" data-bs-toggle="collapse" aria-controls="OffCanvas__collapseReport1") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
+            div(class="collapse mb-1 text-end" id="OffCanvas__collapseReply1")
+              form
+                textarea(class="w-100" placeholder="Leave your comment here.")
+                button(type="submit" class="btn btn-primary btn-sm") Reply
+            div(class="collapse mb-2 text-end" id="OffCanvas__collapseReport1")
+              form
+                textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
+                button(type="submit" class="btn btn-danger btn-sm") Report
+        div(class="OffCanvas__ReviewResponse" id="OffCanvas__ReviewResponse1")
           //- User and Timestamp first reply
-          div
+          div(class="OffCanvas_ReviewByline")
             img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
             a(class="link-offset-2 text-dark small") John Doe
-            span(class="small")  @ 6/30/2023 11:28 AM EST
-          div
+            span(class="small muted")  6/30/2023
+          div(class="OffCanvas__ReviewBody")
             //- Reply text
             p(class="truncate-overflow") Velit proident officia eu occaecat consectetur. Irure do officia occaecat id laborum do laborum pariatur tempor elit. Minim velit nisi ea nostrud Lorem dolor irure enim.
             //- Response box
-            ul(class="responseBox" id="responseBox2")
-              li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#responseBox2") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
-              li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#responseBox2") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
-              li(class="list-inline-item") #[a(class="replyLink link-secondary link-offset-2" href="#collapseReply2" data-bs-toggle="collapse" aria-controls="collapseReply2") #[i(class="bi bi-reply" data-bs-toggle="tooltip" data-bs-title="Reply")]]
-              li(class="list-inline-item") #[a(class="shareLink link-secondary" href="#responseBox2") #[i(class="bi bi-share" data-bs-toggle="tooltip" data-bs-title="Share")]]
+            ul(class="OffCanvas__ResponseBox" id="OffCanvas__responseBox2")
+              li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#OffCanvas__responseBox2") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
+              li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#OffCanvas__responseBox2") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
               li(class="list-inline-item") | 
-              li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#collapseReport2" data-bs-toggle="collapse" aria-controls="collapseReport2") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
-            div(class="collapse mb-2 text-end" id="collapseReply2")
+              li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#OffCanvas__collapseReport2" data-bs-toggle="collapse" aria-controls="OffCanvas__collapseReport2") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
+            div(class="collapse mb-2 text-end" id="OffCanvas__collapseReport2")
               form
-                textarea(class="w-100" placeholder="Leave your comment here.")
-                button(type="submit" class="btn btn-primary") Reply
-            div(class="collapse mb-2 text-end" id="collapseReport2")
+                textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
+                button(type="submit" class="btn btn-danger") Report
+        div(class="OffCanvas__ReviewResponse" id="OffCanvas__ReviewResponse3")
+          //- User and Timestamp first reply
+          div(class="OffCanvas__ReviewByline")
+            img(class="reviewCard__PosterImage" src="https://mypages.svsu.edu/~jweaver/site/images/ProfilePic.jpg") 
+            a(class="link-offset-2 text-dark small") Susan Marino
+            span(class="small muted")  7/30/2023
+          div(class="OffCanvas__ReviewBody")
+            //- Reply text
+            p(class="truncate-overflow") Anim mollit ea reprehenderit tempor. Irure culpa deserunt proident do exercitation. Officia non nostrud ea laboris.
+            //- Response box
+            ul(class="OffCanvas__ResponseBox" id="OffCanvas__responseBox3")
+              li(class="list-inline-item") #[a(class="helpfulLink link-secondary" href="#OffCanvas__responseBox3") #[i(class="bi bi-hand-thumbs-up" data-bs-toggle="tooltip" data-bs-title="Helpful")]]
+              li(class="list-inline-item") #[a(class="unhelpfulLink link-secondary" href="#OffCanvas__responseBox3") #[i(class="bi bi-hand-thumbs-down" data-bs-toggle="tooltip" data-bs-title="Not Helpful")]]
+              li(class="list-inline-item") | 
+              li(class="list-inline-item") #[a(class="reportLink link-secondary" href="#OffCanvas__collapseReport3" data-bs-toggle="collapse" aria-controls="OffCanvas__collapseReport3") #[i(class="bi bi-flag" data-bs-toggle="tooltip" data-bs-title="Report")]]
+            div(class="collapse mb-2 text-end" id="OffCanvas__collapseReport3")
               form
                 textarea(class="w-100" placeholder="Please explain why you are reporting this post.")
                 button(type="submit" class="btn btn-danger") Report
@@ -126,7 +139,7 @@ html(lang="en")
                 li
                   a(class="dropdown-item",href="/../theopenjournal") The Open Journal
                 li
-                  a(class="dropdown-item",href="/../psychology") Psychology
+                  a(class="dropdown-item",href="/../psychology") TOJ Psychology
                 li
                   hr(class="dropdown-divider")
                 li

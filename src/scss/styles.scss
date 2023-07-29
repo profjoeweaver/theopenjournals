@@ -230,3 +230,30 @@ table.userMetricsTable td{
 .pointer{
     cursor: pointer;
 }
+
+.OffCanvas__Review{
+    @extend .border-bottom;
+    @extend .mb-2;
+}
+
+.OffCanvas__ReviewResponse{
+    @extend .border-bottom;
+    @extend .ms-2;
+    @extend .mb-2;
+}
+
+.OffCanvas__ReviewBody{
+    @extend .ps-1;
+    @extend .mt-1;
+}
+
+.OffCanvas__ResponseBox{
+    @extend .list-inline;
+    @extend .list-unstyled;
+    @extend .d-flex;
+    @extend .justify-content-end
+}
+
+.OffCanvas__ResponseBox > li{
+    @extend .mx-3;
+}
