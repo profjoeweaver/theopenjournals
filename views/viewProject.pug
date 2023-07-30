@@ -72,8 +72,9 @@ block content
             label(for="soundness") Soundness: #[span(id="soundnessValue")]
             input(class="my-2" type="range" id="soundness" name="soundness" min="0" max="10")
             label(for="reviewComments") Comments:
-            textarea(class="w-100 my-2" id="editor" name="reviewComments" placeholder="Please share your comments.")
-            button(type="submit" class="btn btn-primary btn-sm") Post
+            textarea(id="editor" name="reviewComments" placeholder="Please share your comments.")
+            button(type="submit" class="btn btn-primary btn-sm my-2") Post
+            button(type="button" class="btn btn-danger btn-sm" data-bs-toggle="collapse" data-bs-target="#newReview" aria-controls="newReview") Cancel
       div(id="Reviews")
         div(class="reviewGroup")
           div(class="reviewCard")

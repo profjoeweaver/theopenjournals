@@ -1,6 +1,6 @@
 tinymce.init({
     selector: 'textarea#editor',
-    height: 500,
+    height: 300,
     menubar: false,
     plugins: [
         'advlist', 'autolink',
