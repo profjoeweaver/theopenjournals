@@ -1,0 +1,42 @@
+extends layout
+
+block title 
+    title New Project
+
+block sectionTitle
+    span Psychology
+
+block content
+    div(class="row py-0")
+        h1(class="display-6") New Project
+        div(class="col-md-9 col-sm-12")
+            div(class="card p-2")
+                div(class="card-body")
+                    form(action="" id="newProject__Form")
+                        div(class="mb-3 row")
+                            input(type="text" id="newProject__Title" name="title" placeholder="Project Title" class="")
+                        div(class="mb-1 row")
+                            div(class="col-auto")
+                                p(class="") Joe Weaver
+                            div(class="col-auto")
+                                input(type="text" id="newProject__Contributor" name="contributor" placeholder="Enter another contributor's email address*" class="")
+                                p(class="small muted") #[sup *] A request to join the project will be sent to the contributor .
+                        div(class="row mb-3")
+                            input(type="text" id="newProject__Keywords" name="keywords" placeholder="Keywords (Separate with commas)" class="")
+                        div(class="row mb-3")
+                            textarea(id="editor" name="content" placeholder="")
+                        div(class="mb-3")
+                            p or upload a text file
+                                button(type="button" class="btn btn-secondary mx-2 btn-sm") Select File
+                        div(class="mb-3 d-flex justify-content-end")
+                            button(type="submit" class="btn btn-primary") Save
+        div(class="col-md-3 col-sm-12")
+            div(class="card" id="newProject__ImageUploader")
+                div(class="card-body m-3 rounded" style="border:1px dashed #6c757d")
+                    h2(class="display-6 card-title text-center mb-4") Upload Images
+                    div(class="text-center" id="newProject_ImageDropZone" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)")
+                        p(class="card-text") Drag Files
+                        i(class="bi bi-upload display-3 text-black-50")
+                        p(class="card-text") or 
+                        button(class="btn btn-secondary") Select Files
+            

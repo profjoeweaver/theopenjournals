@@ -8,18 +8,57 @@ import * as bootstrap from 'bootstrap'
 var $ = require('jquery')
 var jQuery = require('jquery')
 
+//File Drag and Drop
+function dropHandler(ev) {
+    console.log("File(s) dropped");
+
+    // Prevent default behavior (Prevent file from being opened)
+    ev.preventDefault();
+
+    if (ev.dataTransfer.items) {
+        // Use DataTransferItemList interface to access the file(s)
+        [...ev.dataTransfer.items].forEach((item, i) => {
+            // If dropped items aren't files, reject them
+            if (item.kind === "file") {
+                const file = item.getAsFile();
+                console.log(`… file[${i}].name = ${file.name}`);
+            }
+        });
+    } else {
+        // Use DataTransfer interface to access the file(s)
+        [...ev.dataTransfer.files].forEach((file, i) => {
+            console.log(`… file[${i}].name = ${file.name}`);
+        });
+    }
+}
+
+function dragOverHandler(ev) {
+    console.log("File(s) in drop zone");
+
+    // Prevent default behavior (Prevent file from being opened)
+    ev.preventDefault();
+}
+
+
+
+// UI 
 (function () {
+
+    // Load Tooltip 
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     
+    // Toggles for User Dashboard
     $('.toggleSwitch').on("click", function () {
         $(this).find("i").toggleClass("bi-toggle-on bi bi-toggle-off");
     });
 
+    // Close Cards
     $('.btn_close').on("click", function () {
         $(this).closest('.card').hide( "slow" );
     });
 
+    // Review Response Options
     $('.helpfulLink').on( "click", function (){
         $(this).find("i").toggleClass("bi-hand-thumbs-up bi-hand-thumbs-up-fill")
         $(this).toggleClass("link-secondary link-success")
@@ -51,10 +90,12 @@ var jQuery = require('jquery')
         $(this).toggleClass("link-secondary link-danger")
     });
 
+    // Truncate / untruncate long text
     $('.truncate-overflow').on( "click", function(){
         $(this).toggleClass('truncate-overflow')
     })
 
+    // Sliders for new clarity and soundness ratings
     $("#clarityValue").text($('#clarity').val());
 
     $('#clarity').on( "change", function(){

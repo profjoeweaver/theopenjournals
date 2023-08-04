@@ -10,5 +10,10 @@ tinymce.init({
     ],
     toolbar: 'undo redo | casechange blocks | bold italic backcolor | ' +
         'alignleft aligncenter alignright alignjustify | ' +
-        'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+        'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help',
+    setup: function(editor){
+        editor.on('init', function(e){
+            editor.setContent('<p>You can paste, write in Markdown, or use the toolbar for formatting</p>')
+        });
+    }
 });

@@ -7,6 +7,7 @@ var logger = require('morgan');
 var Router = require('./routes/index');
 var userRouter = require('./routes/user');
 var projectRouter = require('./routes/project');
+var newProjectRouter = require('./routes/newProject')
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use('/tinymce', express.static(path.join(__dirname, 'node_modules', 'tinymce
 app.use('/', Router);
 app.use('/', userRouter);
 app.use('/', projectRouter);
+app.use('/', newProjectRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
