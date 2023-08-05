@@ -8,38 +8,6 @@ import * as bootstrap from 'bootstrap'
 var $ = require('jquery')
 var jQuery = require('jquery')
 
-//File Drag and Drop
-function dropHandler(ev) {
-    console.log("File(s) dropped");
-
-    // Prevent default behavior (Prevent file from being opened)
-    ev.preventDefault();
-
-    if (ev.dataTransfer.items) {
-        // Use DataTransferItemList interface to access the file(s)
-        [...ev.dataTransfer.items].forEach((item, i) => {
-            // If dropped items aren't files, reject them
-            if (item.kind === "file") {
-                const file = item.getAsFile();
-                console.log(`… file[${i}].name = ${file.name}`);
-            }
-        });
-    } else {
-        // Use DataTransfer interface to access the file(s)
-        [...ev.dataTransfer.files].forEach((file, i) => {
-            console.log(`… file[${i}].name = ${file.name}`);
-        });
-    }
-}
-
-function dragOverHandler(ev) {
-    console.log("File(s) in drop zone");
-
-    // Prevent default behavior (Prevent file from being opened)
-    ev.preventDefault();
-}
-
-
 
 // UI 
 (function () {
@@ -107,6 +75,35 @@ function dragOverHandler(ev) {
     $('#soundness').on( "change", function(){
         $('#soundnessValue').text($('#soundness').val());
     })
+
+    // File Drag to Upload
+    const newProject__ImageDropZone = document.getElementById("newProject__ImageDropZone");
+    const newProject__ImageUploader = document.getElementById("newProject__ImageUploader");
+    const newProject__FileUpload = document.getElementById("newProject__FileUpload");
+    const newProject_FileName = document.getElementById("newProject_FileName");
+
+    newProject__ImageDropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        newProject__ImageUploader.classList.add("activeDragDrop");
+    });
+
+    newProject__ImageDropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        newProject__ImageUploader.classList.remove("activeDragDrop");
+    });
+
+    newProject__ImageDropZone.addEventListener("click", (e) => {
+        e.preventDefault();
+        var file_input = document.createElement('input');
+        file_input.type = 'file';
+        file_input.click();
+    });
+
+    newProject__FileUpload.addEventListener("change", (e) => {
+        var path = newProject__FileUpload.value;
+        var filename = path.replace(/^.*\\/,"");
+        newProject_FileName.textContent = filename;
+    });
 
 });
 

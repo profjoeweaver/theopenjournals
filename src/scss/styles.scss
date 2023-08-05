@@ -280,6 +280,12 @@ table.userMetricsTable td{
     cursor: pointer;
 }
 
-#newProject__ImageUploader:-moz-drag-over{
-    background-color: $gray-200;
+.activeDragDrop{
+    background-color:$gray-200;
+}
+
+.custom-file-label {
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .btn-sm;
 }

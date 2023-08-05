@@ -26,17 +26,18 @@ block content
                         div(class="row mb-3")
                             textarea(id="editor" name="content" placeholder="")
                         div(class="mb-3")
-                            p or upload a text file
-                                button(type="button" class="btn btn-secondary mx-2 btn-sm") Select File
+                            div(class="custom-file")
+                                p or
+                                    label(class="custom-file-label ms-2" for="newProject__FileUpload" id="newProject__FileUploadLabel") Choose a file
+                                    input(type="file" class="visually-hidden" name="newProject__FileUpload" id="newProject__FileUpload" accept=".md, .txt, .rtf., html, .doc., .docx")
+                                    span(class="muted small ms-2 text-start" id="newProject_FileName") No file selected
                         div(class="mb-3 d-flex justify-content-end")
                             button(type="submit" class="btn btn-primary") Save
         div(class="col-md-3 col-sm-12")
             div(class="card" id="newProject__ImageUploader")
                 div(class="card-body m-3 rounded" style="border:1px dashed #6c757d")
                     h2(class="display-6 card-title text-center mb-4") Upload Images
-                    div(class="text-center" id="newProject_ImageDropZone" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)")
-                        p(class="card-text") Drag Files
+                    div(class="text-center" id="newProject__ImageDropZone")
+                        p(class="card-text") drag files or click to select
                         i(class="bi bi-upload display-3 text-black-50")
-                        p(class="card-text") or 
-                        button(class="btn btn-secondary") Select Files
             
