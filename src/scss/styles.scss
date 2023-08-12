@@ -2,6 +2,9 @@
 $offcanvas-horizontal-width: 100vw;
 $offcanvas-transition-duration: 0s;
 $primary: #107896;
+$tooltip-bg: $primary;
+$tooltip-color: #FFFFFF;
+
 
 //Import all of Bootstrap's CSS
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -38,6 +41,10 @@ html {
 html {
     --lh: 1.5rem;
     line-height: var(--lh);
+}
+
+.pointer{
+    cursor: pointer;
 }
 
 #Reviews{
@@ -203,12 +210,12 @@ html {
     margin-left: 3em;
 }
 
-.metricsBox{
+.MetricsOptionsBox{
     @extend .card;
-    border:0;
-    padding-top:0;
-    margin-top:0;
-    background-color: $light
+    padding:0;
+    margin:0;
+    background-color: $light;
+    border: none;
 }
 
 .responseBox{

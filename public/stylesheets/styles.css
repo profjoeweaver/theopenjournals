@@ -4353,7 +4353,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.card, .metricsBox, .reviewCard, .reviewGroup {
+.card, .MetricsOptionsBox, .reviewCard, .reviewGroup {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
@@ -4385,27 +4385,27 @@ textarea.form-control-lg {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
-.card > hr, .metricsBox > hr, .reviewCard > hr, .reviewGroup > hr {
+.card > hr, .MetricsOptionsBox > hr, .reviewCard > hr, .reviewGroup > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group, .metricsBox > .list-group, .reviewCard > .list-group, .reviewGroup > .list-group {
+.card > .list-group, .MetricsOptionsBox > .list-group, .reviewCard > .list-group, .reviewGroup > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child, .metricsBox > .list-group:first-child, .reviewCard > .list-group:first-child, .reviewGroup > .list-group:first-child {
+.card > .list-group:first-child, .MetricsOptionsBox > .list-group:first-child, .reviewCard > .list-group:first-child, .reviewGroup > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
-.card > .list-group:last-child, .metricsBox > .list-group:last-child, .reviewCard > .list-group:last-child, .reviewGroup > .list-group:last-child {
+.card > .list-group:last-child, .MetricsOptionsBox > .list-group:last-child, .reviewCard > .list-group:last-child, .reviewGroup > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
-.card > .card-header + .list-group, .metricsBox > .card-header + .list-group, .card > .reviewCard__Header + .list-group, .metricsBox > .reviewCard__Header + .list-group, .reviewCard > .card-header + .list-group, .reviewCard > .reviewCard__Header + .list-group, .reviewGroup > .card-header + .list-group, .reviewGroup > .reviewCard__Header + .list-group,
+.card > .card-header + .list-group, .MetricsOptionsBox > .card-header + .list-group, .card > .reviewCard__Header + .list-group, .MetricsOptionsBox > .reviewCard__Header + .list-group, .reviewCard > .card-header + .list-group, .reviewCard > .reviewCard__Header + .list-group, .reviewGroup > .card-header + .list-group, .reviewGroup > .reviewCard__Header + .list-group,
 .card > .list-group + .card-footer,
-.metricsBox > .list-group + .card-footer,
+.MetricsOptionsBox > .list-group + .card-footer,
 .reviewCard > .list-group + .card-footer,
 .reviewGroup > .list-group + .card-footer {
   border-top: 0;
@@ -4501,7 +4501,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
 
-.card-group > .card, .card-group > .metricsBox, .card-group > .reviewCard, .card-group > .reviewGroup {
+.card-group > .card, .card-group > .MetricsOptionsBox, .card-group > .reviewCard, .card-group > .reviewGroup {
   margin-bottom: var(--bs-card-group-margin);
 }
 @media (min-width: 576px) {
@@ -4509,54 +4509,54 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card, .card-group > .metricsBox, .card-group > .reviewCard, .card-group > .reviewGroup {
+  .card-group > .card, .card-group > .MetricsOptionsBox, .card-group > .reviewCard, .card-group > .reviewGroup {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card, .card-group > .metricsBox + .card, .card-group > .card + .metricsBox, .card-group > .metricsBox + .metricsBox, .card-group > .reviewCard + .card, .card-group > .reviewCard + .metricsBox, .card-group > .card + .reviewCard, .card-group > .metricsBox + .reviewCard, .card-group > .reviewCard + .reviewCard, .card-group > .reviewGroup + .card, .card-group > .reviewGroup + .metricsBox, .card-group > .reviewGroup + .reviewCard, .card-group > .card + .reviewGroup, .card-group > .metricsBox + .reviewGroup, .card-group > .reviewCard + .reviewGroup, .card-group > .reviewGroup + .reviewGroup {
+  .card-group > .card + .card, .card-group > .MetricsOptionsBox + .card, .card-group > .card + .MetricsOptionsBox, .card-group > .MetricsOptionsBox + .MetricsOptionsBox, .card-group > .reviewCard + .card, .card-group > .reviewCard + .MetricsOptionsBox, .card-group > .card + .reviewCard, .card-group > .MetricsOptionsBox + .reviewCard, .card-group > .reviewCard + .reviewCard, .card-group > .reviewGroup + .card, .card-group > .reviewGroup + .MetricsOptionsBox, .card-group > .reviewGroup + .reviewCard, .card-group > .card + .reviewGroup, .card-group > .MetricsOptionsBox + .reviewGroup, .card-group > .reviewCard + .reviewGroup, .card-group > .reviewGroup + .reviewGroup {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child), .card-group > .metricsBox:not(:last-child), .card-group > .reviewCard:not(:last-child), .card-group > .reviewGroup:not(:last-child) {
+  .card-group > .card:not(:last-child), .card-group > .MetricsOptionsBox:not(:last-child), .card-group > .reviewCard:not(:last-child), .card-group > .reviewGroup:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top, .card-group > .metricsBox:not(:last-child) .card-img-top, .card-group > .reviewCard:not(:last-child) .card-img-top, .card-group > .reviewGroup:not(:last-child) .card-img-top,
+  .card-group > .card:not(:last-child) .card-img-top, .card-group > .MetricsOptionsBox:not(:last-child) .card-img-top, .card-group > .reviewCard:not(:last-child) .card-img-top, .card-group > .reviewGroup:not(:last-child) .card-img-top,
   .card-group > .card:not(:last-child) .card-header,
-  .card-group > .metricsBox:not(:last-child) .card-header,
+  .card-group > .MetricsOptionsBox:not(:last-child) .card-header,
   .card-group > .card:not(:last-child) .reviewCard__Header,
-  .card-group > .metricsBox:not(:last-child) .reviewCard__Header,
+  .card-group > .MetricsOptionsBox:not(:last-child) .reviewCard__Header,
   .card-group > .reviewCard:not(:last-child) .card-header,
   .card-group > .reviewCard:not(:last-child) .reviewCard__Header,
   .card-group > .reviewGroup:not(:last-child) .card-header,
   .card-group > .reviewGroup:not(:last-child) .reviewCard__Header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .metricsBox:not(:last-child) .card-img-bottom, .card-group > .reviewCard:not(:last-child) .card-img-bottom, .card-group > .reviewGroup:not(:last-child) .card-img-bottom,
+  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .MetricsOptionsBox:not(:last-child) .card-img-bottom, .card-group > .reviewCard:not(:last-child) .card-img-bottom, .card-group > .reviewGroup:not(:last-child) .card-img-bottom,
   .card-group > .card:not(:last-child) .card-footer,
-  .card-group > .metricsBox:not(:last-child) .card-footer,
+  .card-group > .MetricsOptionsBox:not(:last-child) .card-footer,
   .card-group > .reviewCard:not(:last-child) .card-footer,
   .card-group > .reviewGroup:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child), .card-group > .metricsBox:not(:first-child), .card-group > .reviewCard:not(:first-child), .card-group > .reviewGroup:not(:first-child) {
+  .card-group > .card:not(:first-child), .card-group > .MetricsOptionsBox:not(:first-child), .card-group > .reviewCard:not(:first-child), .card-group > .reviewGroup:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top, .card-group > .metricsBox:not(:first-child) .card-img-top, .card-group > .reviewCard:not(:first-child) .card-img-top, .card-group > .reviewGroup:not(:first-child) .card-img-top,
+  .card-group > .card:not(:first-child) .card-img-top, .card-group > .MetricsOptionsBox:not(:first-child) .card-img-top, .card-group > .reviewCard:not(:first-child) .card-img-top, .card-group > .reviewGroup:not(:first-child) .card-img-top,
   .card-group > .card:not(:first-child) .card-header,
-  .card-group > .metricsBox:not(:first-child) .card-header,
+  .card-group > .MetricsOptionsBox:not(:first-child) .card-header,
   .card-group > .card:not(:first-child) .reviewCard__Header,
-  .card-group > .metricsBox:not(:first-child) .reviewCard__Header,
+  .card-group > .MetricsOptionsBox:not(:first-child) .reviewCard__Header,
   .card-group > .reviewCard:not(:first-child) .card-header,
   .card-group > .reviewCard:not(:first-child) .reviewCard__Header,
   .card-group > .reviewGroup:not(:first-child) .card-header,
   .card-group > .reviewGroup:not(:first-child) .reviewCard__Header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .metricsBox:not(:first-child) .card-img-bottom, .card-group > .reviewCard:not(:first-child) .card-img-bottom, .card-group > .reviewGroup:not(:first-child) .card-img-bottom,
+  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .MetricsOptionsBox:not(:first-child) .card-img-bottom, .card-group > .reviewCard:not(:first-child) .card-img-bottom, .card-group > .reviewGroup:not(:first-child) .card-img-bottom,
   .card-group > .card:not(:first-child) .card-footer,
-  .card-group > .metricsBox:not(:first-child) .card-footer,
+  .card-group > .MetricsOptionsBox:not(:first-child) .card-footer,
   .card-group > .reviewCard:not(:first-child) .card-footer,
   .card-group > .reviewGroup:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
@@ -5768,8 +5768,8 @@ textarea.form-control-lg {
   --bs-tooltip-padding-y: 0.25rem;
   --bs-tooltip-margin: ;
   --bs-tooltip-font-size: 0.875rem;
-  --bs-tooltip-color: var(--bs-body-bg);
-  --bs-tooltip-bg: var(--bs-emphasis-color);
+  --bs-tooltip-color: #FFFFFF;
+  --bs-tooltip-bg: #107896;
   --bs-tooltip-border-radius: var(--bs-border-radius);
   --bs-tooltip-opacity: 0.9;
   --bs-tooltip-arrow-width: 0.8rem;
@@ -12056,6 +12056,10 @@ html {
   line-height: var(--lh);
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 #Reviews {
   max-height: 95vh;
   overflow-y: scroll;
@@ -12212,11 +12216,11 @@ html {
   margin-left: 3em;
 }
 
-.metricsBox {
-  border: 0;
-  padding-top: 0;
-  margin-top: 0;
+.MetricsOptionsBox {
+  padding: 0;
+  margin: 0;
   background-color: #f8f9fa;
+  border: none;
 }
 
 table.userMetricsTable td {

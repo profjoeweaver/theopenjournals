@@ -12,12 +12,16 @@ block content
       h1(class="display-5 text-capitalize line-clamp-2") Qui deserunt mollit et nisi dolore elit dolor id
       p #[a(class="link-secondary link-offset-2" href="") Joe Weaver]
       p #[b Keywords:] #[a(class="link-secondary link-offset-2" href="") Irure], #[a(class="link-secondary link-offset-2" href="") Laboris], #[a(class="link-secondary link-offset-2" href="") Reprehenderit]
-    div(class="col-sm-12 col-md-12 col-lg-3 metricsBox")
-      div(class="card-header bg-light px-0")
-        b Metrics
-      div(class="card-body p-0")
+    div(class="col-sm-12 col-md-12 col-lg-3 MetricsOptionsBox")
+      div(class="d-flex justify-content-center py-2 mx-2 border bg-white rounded")
+        i(class="bi bi-share px-3 pointer" data-bs-toggle="tooltip" data-bs-title="Share Project")
+        i(class="bi bi-bookmark px-3 pointer" data-bs-toggle="tooltip" data-bs-title="Add to Reading List")
+        i(class="bi bi-blockquote-left px-3 pointer" data-bs-toggle="tooltip" data-bs-title="Cite")
+        span(class="px-3") |
+        i(class="bi bi-flag pointer px-3" data-bs-toggle="tooltip" data-bs-title="Report")
+      div(class="card-body")
         block metrics
-          table(class="table table-light") 
+          table(class="table table-light table-borderless mb-0") 
             tr
               td #[b 7.5] Clarity
               td #[b 6.5] Soundness
