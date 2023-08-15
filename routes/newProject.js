@@ -7,7 +7,7 @@ var path = require('path');
 
 /* GET home page. */
 router.get('/newProject/', function(req, res) {
-  res.render('newProject');
+  res.render('newProject',{userName: 'Joe Weaver', section: "New Project"});
 });
 
 module.exports = router;

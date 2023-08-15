@@ -51,8 +51,9 @@ body(class="d-flex flex-column h-100")
         block content
           div(class="text-center")
             h1(class="display-1") #[i(class="bi bi-emoji-frown")]
-            h2(class="display-2") There's been a problem
-            h3 So sorry; we're working on it
+            h1= message
+            h2= error.status
+            pre #{error.stack}
   footer(class="footer mt-auto")
     div(class="container-flex")
       div(class="row bg-dark text-light pt-4 mx-0")

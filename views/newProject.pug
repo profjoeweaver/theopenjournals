@@ -4,7 +4,7 @@ block title
     title New Project
 
 block sectionTitle
-    span Psychology
+    span= section
 
 block content
     div(class="row py-0")
@@ -13,18 +13,30 @@ block content
             div(class="card p-2")
                 div(class="card-body")
                     form(action="" id="newProject__Form")
-                        div(class="mb-3 row")
-                            input(type="text" id="newProject__Title" name="title" placeholder="Project Title" class="")
-                        div(class="mb-1 row")
-                            div(class="col-auto")
-                                p(class="") Joe Weaver
-                            div(class="col-auto")
-                                input(type="text" id="newProject__Contributor" name="contributor" placeholder="Enter another contributor's email address*" class="")
-                                p(class="small muted") #[sup *] A request to join the project will be sent to the contributor .
-                        div(class="row mb-3")
-                            input(type="text" id="newProject__Keywords" name="keywords" placeholder="Keywords (Separate with commas)" class="")
-                        div(class="row mb-3")
-                            textarea(id="editor" name="content" placeholder="")
+                        table(class="table-borderless w-100" cellpadding="5")
+                            tr
+                                td(class="align-top") Journal
+                                td(class="align-top")
+                                    select(name="newProject_Journal" id="newProject__Journal" class="form-select-sm ps-1" aria-label="Journal" required)
+                                        option(value="select a journal" selected disabled) Select a Journal
+                                        option(value="Psychology") Psychology
+                                    span(class="ms-2") or #[a(class="btn btn-sm btn-primary ms-2" hfref="/../newJournal") Request New Journal]
+                            tr
+                                td(class="align-top") Title 
+                                td(class="align-top") 
+                                    input(type="text" id="newProject__Title" name="title" placeholder="Project Title" class="w-100" required)
+                            tr 
+                                td(class="align-top") Authors 
+                                td(class="align-top") 
+                                    span(class="")= userName
+                                    input(type="text" id="newProject__Contributor" name="contributor" placeholder="Enter another contributor's email address*" class="w-75 ms-2")
+                                    p(class="small muted") #[sup *] A request to join the project will be sent to the contributor .
+                            tr
+                                td(class="align-top") Keywords 
+                                td(class="align-top") 
+                                    input(type="text" id="newProject__Keywords" name="keywords" placeholder="Keywords (Separate with commas)" class="w-100" required)
+                        div(class="row my-3")
+                            textarea(id="editor" name="content" placeholder="" required)
                         div(class="mb-3")
                             div(class="custom-file")
                                 p or
@@ -32,7 +44,7 @@ block content
                                     input(type="file" class="visually-hidden" name="newProject__FileUpload" id="newProject__FileUpload" accept=".md, .txt, .rtf., html, .doc., .docx")
                                     span(class="muted small ms-2 text-start" id="newProject_FileName") No file selected
                         div(class="mb-3 d-flex justify-content-end")
-                            button(type="submit" class="btn btn-primary") Save
+                            button(type="submit" class="btn btn-primary") Preview
                             a(class="btn btn-danger ms-2" href="/../user") Cancel
         div(class="col-md-3 col-sm-12")
             div(class="card" id="newProject__ImageUploader")

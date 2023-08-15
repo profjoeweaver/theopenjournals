@@ -65,9 +65,11 @@ block content
   // - Section for Projects, Reviews, and Reads
   div(class="col-sm-12 col-md-6 col-lg-8")
     div(class="row")
-      h2(class="mt-2") My Projects 
+      span(class="display-6 mt-2") My Projects
         a(class="toggleSwitch" data-bs-toggle="collapse" href="#collapseProject" role="button" aria-expanded="true" aria-controls="collapseProject")
-          i(class="bi-toggle-on")   
+          i(class="ms-2 bi-toggle-on")
+          a(class="btn btn-primary ms-2" href="/../newProject")
+            i(class="bi bi-plus-circle")  New Project
       div(class="collapse show" id="collapseProject")
         div(class="row gx-2")
           div(class="card p-0 me-3 my-2 col-sm-6 col-md-3 position-relative" style="max-height: 25em;")
@@ -86,14 +88,9 @@ block content
                 li(class="list-inline-item") 75% #[i(class="bi bi-plus-lg" data-bs-toggle="tooltip" data-bs-title="Positive Ratings")]
                 li(class="list-inline-item") 3 #[i(class="bi bi-chat-square-text" data-bs-toggle="tooltip" data-bs-title="Reviews")]
                 li(class="list-inline-item") 10 #[i(class="bi bi-blockquote-left"  data-bs-toggle="tooltip" data-bs-title="Citations")]
-      div(class="row my-0")
-          div(class="card p-0 me-3 my-2 col-sm-6 col-md-3 position-relative border-0" style="max-height: 25em;")
-            div(class="card-body d-flex align-items-center justify-content-center")
-              a(class="btn btn-primary" href="/../newProject")
-                i(class="bi bi-plus-circle")  New Project
           
     div(class="row mt-4 w-100")
-      h2 My Reviews 
+      span(class="display-6") My Reviews 
         a(class="toggleSwitch" data-bs-toggle="collapse" href="#collapseReview" role="button" aria-expanded="true" aria-controls="collapseReview")
           i(class="bi-toggle-on")
       div(class="collapse show table-responsive" id="collapseReview")
@@ -113,7 +110,7 @@ block content
               td(class="text-center") 06/29/2023
               td(class="text-center") 30%
     div(class="row mt-4")
-      h2 Reading List 
+      span(class="display-6") Reading List 
         a(class="toggleSwitch" data-bs-toggle="collapse" href="#collapseRead" role="button" aria-expanded="true" aria-controls="collapseRead")
           i(class="bi-toggle-on")
       div(class="collapse show" id="collapseRead")
@@ -127,7 +124,7 @@ block content
               a(class="link-offset-2 link-secondary" href="#") Jack Doe
   div(class="col-sm-12 col-md-3 col-lg-2 order-first order-md-last")
     div(class="d-flex flex-column")
-      h2(class="text-sm-start text-md-end border border-0 border-bottom") Activity Feed
+      h2(class="display-6 text-sm-start text-md-end border border-0 border-bottom") Activity
       div(class="card bg-white mb-3 border border-0 rounded-0 border-bottom")
         div(class="card-header bg-white d-flex justify-content-between p-1 border-bottom-0")
             h6(class="pt-1 ps-1 m-0") New Review
